@@ -1,0 +1,526 @@
+.w-1000 {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+/* 以上为通用样式 */
+body {
+  background-color: #f7f7f7;
+}
+
+.page-header {
+  margin: 0 auto;
+  max-width: 1920px;
+  min-width: 1000px;
+  height: 668px;
+  padding-top: 20px;
+  margin-bottom: -106px;
+  box-sizing: border-box;
+  background: url(../img/banner-bg.jpg) no-repeat top/1920px 668px;
+  box-shadow: 0px -120px 20px #f7f7f7 inset;
+}
+
+.header-logo {
+  width: 112px;
+  height: 41px;
+  background: url(../img/logo.jpg) no-repeat center;
+}
+
+.header-banner {
+  width: 729px;
+  height: 329px;
+  margin: 94px auto 0;
+  background: url(../img/banner-pic.png) no-repeat center;
+}
+
+.page-body {
+  position: relative;
+  border: 6px #E2E2E2 solid;
+  box-sizing: border-box;
+}
+
+.reel {
+  position: absolute;
+  /* 37(多出来的宽度74/2) + 6（border） */
+  left: -43px;
+  width: 1074px;
+  height: 19px;
+  background: url(../img/mainer-border.png) no-repeat center;
+}
+
+.reel.top {
+  top: -22px;
+}
+
+.reel.bottom {
+  bottom: -22px;
+  left: -43px;
+}
+
+.intro-section {
+  position: relative;
+  display: flex;
+  background-color: #fff;
+}
+
+.intro-topic {
+  position: absolute;
+  top: 31px;
+  left: 26px;
+  width: 60px;
+  height: 107px;
+  background: url(../img/h2-title-bg1.jpg) no-repeat center;
+}
+
+.intro-box {
+  margin: 98px auto 84px;
+  width: 800px;
+}
+
+.intro-title {
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.intro-desc {
+  margin-top: 32px;
+  font-size: 16px;
+  line-height: 22px;
+  text-indent: 4em;
+}
+
+.nav-section {
+  position: absolute;
+  top: 260px;
+  right: -112px;
+}
+
+.nav-section::before {
+  content: '';
+  display: block;
+  width: 76px;
+  height: 33px;
+  background-image: url(../img/nav-before-bg.png);
+}
+
+.nav-section::after {
+  content: '';
+  display: block;
+  position: relative;
+  left: 28px;
+  width: 76px;
+  height: 7px;
+  background-image: url(../img/nav-after-bg.png);
+}
+
+.nav-list {
+  width: 80px;
+  border: 1px solid #E2E2E2;
+  box-sizing: border-box;
+  margin-left: 26px;
+  font-size: 14px;
+}
+
+.nav-item {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 16px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: #00a3ff;
+}
+
+.nav-item:last-child {
+  color: #CF000D;
+}
+
+.nav-item:nth-child(-n+3) {
+  border-bottom: 1px solid #E2E2E2;
+}
+
+.teachers-section {
+  padding: 24px 30px 42px 20px;
+}
+
+.teachers-intro>* {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.teachers-intro__topic {
+  width: 60px;
+  height: 174px;
+  margin-top: 0px;
+  background: url(../img/h2-title-bg2.png);
+}
+
+.teachers-intro__desc {
+  margin: 48px 65px 0 16px;
+  width: 512px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.teachers-intro__ad {
+  width: 254px;
+  height: 220px;
+  background: url(../img/card-jiuye2.png) no-repeat center;
+  cursor: pointer;
+}
+
+.rank-intro {
+  gap: 26px;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.rank-intro__tag {
+  display: inline-block;
+  width: 42px;
+  height: 60px;
+  background: url(../img/h3-title-bg1.png) no-repeat center;
+}
+
+.rank-intro__title .title {
+  margin-bottom: 10px;
+  font-size: 22px;
+  line-height: 22px;
+}
+
+.rank-intro__title .subtitle {
+  font-size: 16px;
+}
+
+.rank-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 问题，这里设置除了最后一个某一个类，该如何写 */
+/* .teachers-rank:last-of-type {} */
+
+.teachers-rank:nth-child(-n+3) {
+  margin-bottom: 40px;
+}
+
+
+.rank-tcard {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  width: 290px;
+  height: 212px;
+  background: url(../img/card-bg.png) no-repeat center;
+  padding: 13px 16px 0;
+  box-sizing: border-box;
+}
+
+.rank-tcard__avatar {
+  width: 80px;
+  height: 80px;
+  background: url(../img/teacher_avatar_5.png) no-repeat center;
+  cursor: pointer;
+}
+
+.rank-tcard__name {
+  margin: 21px 0 10px;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.rank-tcard__about {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.rank-adcard {
+  width: 290px;
+  height: 212px;
+  background: url(../img/lesson-rxjava.jpg) no-repeat center;
+  cursor: pointer;
+}
+
+.rank-adcard:hover {
+  opacity: .8;
+}
+
+.largest .rank-intro__tag {
+  background-image: url(../img/h3-title-bg2.png);
+}
+
+.rank-adcard.wechat {
+  background-image: url(../img/lesson-wenda.jpg);
+}
+
+.practical .teachers-intro__topic {
+  background: url(../img/h2-title-bg3.png);
+}
+
+
+.practical .teachers-intro__ad {
+  background: url(../img/card-zhiye2.png) no-repeat center;
+}
+
+.popular .rank-intro__tag {
+  background-image: url(../img/h3-title-bg4.png);
+}
+
+.guide .rank-intro__tag {
+  background-image: url(../img/h3-title-bg5.png);
+}
+
+
+.answer .rank-intro__tag {
+  background-image: url(../img/h3-title-bg6.png);
+}
+
+.page-body .separate {
+  width: 951px;
+  height: 15px;
+  margin: 0 auto;
+  background: url(../img/cborder.png) no-repeat center;
+}
+
+.practical-footer {
+  width: 182px;
+  height: 32px;
+  line-height: 16px;
+  font-size: 14px;
+  color: #666;
+  margin: 22px 0 22px auto;
+}
+
+.practical {
+  padding-bottom: 0;
+}
+
+.wish-section {
+  background-color: #fff;
+  padding: 15px 30px 15px 20px;
+}
+
+.wish-box {
+  align-items: flex-start;
+  display: flex;
+  margin-bottom: 60px;
+}
+
+.wish-topic {
+  flex-shrink: 0;
+  width: 60px;
+  height: 107px;
+  background: url(../img/cloud.png) no-repeat center;
+}
+
+.wish-title {
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+  margin: 22px 0 15px;
+}
+
+.wish-activity {
+  display: flex;
+}
+
+.wish-activity__left {
+  margin-left: 16px;
+  margin-right: 37px;
+}
+
+.wish-activity__note {
+  margin-top: 12px;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration: underline;
+  margin-bottom: 22px;
+}
+
+.wish-activity__time {
+  font-size: 12px;
+  line-height: 16px;
+  margin-bottom: 8px;
+}
+
+.wish-activity__rule {
+  align-items: flex-start;
+  display: flex;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.wish-activity__rule-title {
+  width: 60px;
+  flex-shrink: 0;
+}
+
+.wish-activity__rule-item {
+  margin-bottom: 8px;
+}
+
+.wish-activity__gifts {
+  width: 476px;
+  height: 237px;
+  background: url(../img/prize_03.jpg);
+}
+
+.wish-activity__rolling {
+  margin-top: 15px;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.wish-input {
+  position: relative;
+  display: flex;
+  width: 800px;
+  height: 86px;
+  margin-top: 26px;
+}
+
+.wish-input::before {
+  content: '';
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  display: block;
+  width: 20px;
+  height: 19px;
+  background-image: url(../img/textarea_bg_1.png);
+}
+
+.wish-input::after {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  right: 151px;
+  z-index: 10;
+  display: block;
+  width: 20px;
+  height: 19px;
+  background: url(../img/textarea_bg_2.png);
+}
+
+.wish-input textarea {
+  width: 650px;
+  padding: 11px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000;
+  border: 1px #DBDBDB solid;
+  border-right: none;
+  resize: none;
+  outline: none;
+}
+
+.wish-input textarea::placeholder {
+  font-size: 16px;
+  line-height: 16px;
+  color: #000;
+}
+
+.wish-input__btn {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  width: 150px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #666;
+  background-color: #ebebeb;
+  border: 1px #DBDBDB solid;
+  cursor: pointer;
+}
+
+.wish-board {
+  position: relative;
+  width: calc(100% - 0px);
+  height: 550px;
+  box-sizing: border-box;
+  background-color: #b89067;
+  border: 10px solid #eec093;
+}
+
+.wish-board__title {
+  margin-top: 20px;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: 'YouYuan';
+  letter-spacing: 8px;
+  text-align: center;
+  color: #444;
+  user-select: none;
+}
+
+.wish-msg {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 320px;
+  height: 160px;
+  box-sizing: border-box;
+  padding: 20px 16px;
+  background: -webkit-linear-gradient(top, transparent 21px, #E2E2E2 22px) repeat;
+  background-color: #f1fff0;
+  background-size: 320px 22px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.wish-msg__name {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.wish-msg__text {
+  color: #000;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.wish-msg::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: -10px;
+  display: block;
+  width: 44px;
+  height: 39px;
+  background-image: url(../img/message_bg_left.png);
+}
+
+.wish-msg::after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  display: block;
+  width: 44px;
+  height: 39px;
+  background-image: url(../img/message_bg_left.png);
+}
+
+.page-footer {
+  margin: 50px 0;
+}
+
+.footer-wish {
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.footer-copyright {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+}
