@@ -23,10 +23,12 @@ const PAGE = {
       },
     ],
     backgroundColors: [
-      '#EAC435',
+      '#fdfbe9',
       '#faf0d5',
-      '#d8dad9',
-      '#c0ddfc',
+      '#f8d6b9',
+      '#d9c9f8',
+      '#f0f5ff',
+      '#fff0f0',
       '#f7c4e2',
     ],
     item: null,
@@ -57,6 +59,8 @@ const PAGE = {
     // 松开鼠标
     window.addEventListener('mouseup', this.handleMouseUp)
 
+    // 删除纸条
+    this.onEventListener(board, 'click', 'wish-msg__delete', this.handleRemove)
     // 双击，纸条消失
     this.onEventListener(board, 'dblclick', 'wish-msg', this.handleRemove)
   },
@@ -83,10 +87,13 @@ const PAGE = {
     let card = document.createElement('div')
     let cardName = document.createElement('div')
     let cardText = document.createElement('div')
+    let cardDelete = document.createElement('div')
 
     card.setAttribute('class', 'wish-msg');
     cardName.setAttribute('class', 'wish-msg__name');
     cardText.setAttribute('class', 'wish-msg__text');
+    cardDelete.setAttribute('class', 'wish-msg__delete');
+
     // 设定位置
     card.style.left = PAGE.randomNum(0, board.clientWidth - PAGE.data.itemWidth) + 'px'
     card.style.top = PAGE.randomNum(0, board.clientHeight - PAGE.data.itemHeight) + 'px'
@@ -94,9 +101,10 @@ const PAGE = {
     cardName.innerHTML = name + '说:';
     cardText.innerHTML = text;
 
-    card.append(cardName, cardText)
+    card.append(cardName, cardText, cardDelete)
     card.style.zIndex = PAGE.data.zIndex++;
     card.style.backgroundColor = PAGE.data.backgroundColors[card.style.zIndex % PAGE.data.backgroundColors.length];
+    card.style.transform = `rotate( ${PAGE.randomNum(-2, 2)}deg )`;
 
     board.append(card)
   },
@@ -105,6 +113,7 @@ const PAGE = {
     if (!msgInput.value || !msgInput.value.trim()) return
 
     PAGE.addMsg('Anonymous', msgInput.value)
+    msgInput.value = '';
   },
   handleMouseDown: function (e) {
     PAGE.data.isLocked = false;

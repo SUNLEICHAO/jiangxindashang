@@ -478,6 +478,7 @@ body {
   background-size: 320px 22px;
   user-select: none;
   cursor: pointer;
+  opacity: .95;
 }
 
 .wish-msg__name {
@@ -489,6 +490,22 @@ body {
   color: #000;
   font-size: 14px;
   line-height: 22px;
+}
+
+.wish-msg__delete {
+  position: absolute;
+  top: -39px;
+  right: 0px;
+  width: 42px;
+  height: 52px;
+  background-image: url(../img/icon-close.png);
+  transform: scale(.5);
+  opacity: 0;
+  transition: all 2s;
+}
+
+.wish-msg:hover .wish-msg__delete {
+  opacity: 1;
 }
 
 .wish-msg::before {
