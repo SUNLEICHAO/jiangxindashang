@@ -9,11 +9,11 @@ body {
 }
 
 .page-header {
-  margin: 0 auto;
   max-width: 1920px;
   min-width: 1000px;
   height: 668px;
   padding-top: 20px;
+  margin: 0 auto;
   margin-bottom: -106px;
   box-sizing: border-box;
   background: url(../img/banner-bg.jpg) no-repeat top/1920px 668px;
@@ -73,8 +73,8 @@ body {
 }
 
 .intro-box {
-  margin: 98px auto 84px;
   width: 800px;
+  margin: 98px auto 84px;
 }
 
 .intro-title {
@@ -116,19 +116,20 @@ body {
 
 .nav-list {
   width: 80px;
-  border: 1px solid #E2E2E2;
-  box-sizing: border-box;
   margin-left: 26px;
+  box-sizing: border-box;
   font-size: 14px;
+  border: 1px solid #E2E2E2;
 }
 
 .nav-item {
-  height: 80px;
-  display: flex;
   align-items: center;
   justify-content: center;
+  display: flex;
+  height: 80px;
   line-height: 16px;
   text-align: center;
+  transition: all .8s;
   cursor: pointer;
 }
 
@@ -161,8 +162,8 @@ body {
 }
 
 .teachers-intro__desc {
-  margin: 48px 65px 0 16px;
   width: 512px;
+  margin: 48px 65px 0 16px;
   font-size: 16px;
   line-height: 24px;
 }
@@ -175,9 +176,9 @@ body {
 }
 
 .rank-intro {
+  align-items: flex-end;
   gap: 26px;
   display: flex;
-  align-items: flex-end;
   margin-bottom: 20px;
 }
 
@@ -199,8 +200,8 @@ body {
 }
 
 .rank-content {
-  display: flex;
   justify-content: space-between;
+  display: flex;
 }
 
 /* 问题，这里设置除了最后一个某一个类，该如何写 */
@@ -209,7 +210,6 @@ body {
 .teachers-rank:nth-child(-n+3) {
   margin-bottom: 40px;
 }
-
 
 .rank-tcard {
   align-items: center;
@@ -220,6 +220,11 @@ body {
   background: url(../img/card-bg.png) no-repeat center;
   padding: 13px 16px 0;
   box-sizing: border-box;
+  transition: transform .8s;
+}
+
+.rank-tcard:hover {
+  transform: translateY(-4px);
 }
 
 .rank-tcard__avatar {
@@ -263,7 +268,6 @@ body {
   background: url(../img/h2-title-bg3.png);
 }
 
-
 .practical .teachers-intro__ad {
   background: url(../img/card-zhiye2.png) no-repeat center;
 }
@@ -275,7 +279,6 @@ body {
 .guide .rank-intro__tag {
   background-image: url(../img/h3-title-bg5.png);
 }
-
 
 .answer .rank-intro__tag {
   background-image: url(../img/h3-title-bg6.png);
@@ -291,10 +294,10 @@ body {
 .practical-footer {
   width: 182px;
   height: 32px;
+  margin: 22px 0 22px auto;
   line-height: 16px;
   font-size: 14px;
   color: #666;
-  margin: 22px 0 22px auto;
 }
 
 .practical {
@@ -320,10 +323,10 @@ body {
 }
 
 .wish-title {
+  margin: 22px 0 15px;
   font-size: 30px;
   line-height: 35px;
   text-align: center;
-  margin: 22px 0 15px;
 }
 
 .wish-activity {
@@ -344,9 +347,9 @@ body {
 }
 
 .wish-activity__time {
+  margin-bottom: 8px;
   font-size: 12px;
   line-height: 16px;
-  margin-bottom: 8px;
 }
 
 .wish-activity__rule {
@@ -369,6 +372,7 @@ body {
   width: 476px;
   height: 237px;
   background: url(../img/prize_03.jpg);
+  cursor: pointer;
 }
 
 .wish-activity__rolling {
@@ -454,7 +458,7 @@ body {
   margin-top: 20px;
   font-size: 40px;
   font-weight: bold;
-  font-family: 'YouYuan';
+  font-family: 'KaiTi';
   letter-spacing: 8px;
   text-align: center;
   color: #444;
@@ -477,8 +481,8 @@ body {
 }
 
 .wish-msg__name {
-  font-size: 16px;
   margin-bottom: 10px;
+  font-size: 16px;
 }
 
 .wish-msg__text {
